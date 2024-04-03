@@ -1,4 +1,7 @@
 void main() {
-  List<String> footballplayers = ['Ronaldo', 'Messi', 'Neymar', 'Hazard'];
-  footballplayers.forEach((names) => print(names));
+  List<String> playername = ['Ronaldo', 'Messi', 'Neymar', 'Hazard'];
+
+  for (var n in playername) {
+    print(n);
+  }
 }

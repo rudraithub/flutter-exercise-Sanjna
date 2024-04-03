@@ -1,23 +1,14 @@
-class Student {
-  String rollNo;
-  String name;
-  String dob;
-  String mob;
-  String city;
-
-  Student(this.rollNo, this.name, this.dob, this.mob, this.city);
-
-  void displayInfo() {
-    print('$rollNo');
-    print('$name');
-    print('$dob');
-    print('$mob');
-    print('$city');
-  }
+void main() {
+  var n = A();
+  print(n.rollno);
+  print(n.name);
+  print(n.dob);
+  print(n.city);
+  print(n.mob);
 }
 
-void main() {
-  var student =
-      Student('01', 'mahi patel', '01-01-1011', '9999999999', 'Bhavnagar');
-  student.displayInfo();
+class A {
+  int rollno = 02;
+  String name = 'Sanjna', dob = '13-02-2002', city = 'bhavnagar';
+  int mob = 9316726716;
 }

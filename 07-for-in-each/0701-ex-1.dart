@@ -1,4 +1,7 @@
 void main() {
-  List<String> s = ['one', 'two', 'three'];
-  s.forEach((numbers) => print(numbers));
+  List<String> no = ['one', 'two', 'three'];
+
+  for (var x in no) {
+    print(x);
+  }
 }
