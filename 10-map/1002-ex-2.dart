@@ -1,102 +1,49 @@
 void main() {
   Map<String, dynamic> s = {
-    'name': 'gurukul',
-    'mobileno': 9658452125,
-    'address': 'vadodara',
+    'name': 'Gyanguru vidhyapith',
+    'mobile': '9316726716',
+    'address': 'sagwadi,bhavnagar',
     'course': ['commerce', 'science', 'arts']
   };
 
+  //1
   print(s);
-}
-//
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
-  print(s['Mobileno']);
-}
+  //2
+  print(s['mobile']);
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'name': 'gurukul',
-    'mobileno': 9658452125,
-    'address': 'vadodara',
-    'course': ['commerce', 'science', 'arts']
-  };
-
+  //3
   print(s.length);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'name': 'gurukul',
-    'mobileno': 9658452125,
-    'address': 'vadodara',
-    'course': ['commerce', 'science', 'arts']
-  };
-
+  //4
   print(s['name']);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'name': 'gurukul',
-    'mobileno': 9658452125,
-    'address': 'vadodara',
-    'course': ['commerce', 'science', 'arts']
-  };
-  s.forEach((key, value) => print(key));
+  //5
+  s.forEach((key, value) {
+    print(key + ": $value");
+  });
+  print('');
+
+  //6
+  s.remove('address');
   print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'name': 'gurukul',
-    'mobileno': 9658452125,
-    'address': 'vadodara',
-    'course': ['commerce', 'science', 'arts']
-  };
-
-  print(s.remove('address'));
+  //7
+  s['email'] = 'gyanguru@gmail.com';
   print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'name': 'gurukul',
-    'mobileno': 9658452125,
-    'address': 'vadodara',
-    'course': ['commerce', 'science', 'arts']
-  };
-  s.addAll({'Email': 'gurukul@gmail.com'});
-
-  print(s);
-}
-
-void main() {
-  Map<String, dynamic> s = {
-    'name': 'gurukul',
-    'mobileno': 9658452125,
-    'address': 'vadodara',
-    'course': ['commerce', 'science', 'arts']
-  };
+  //8
   print(s.isEmpty);
+  print('');
 
+  //9
+  s.addAll({'student name': 'sanjna', 'student city': 'vadodara'});
   print(s);
-}
-
-void main() {
-  Map<String, dynamic> s = {
-    'name': 'gurukul',
-    'mobileno': 9658452125,
-    'address': 'vadodara',
-    'course': ['commerce', 'science', 'arts']
-  };
-  s.addAll({'StudentName': 'Rutva', 'Studentcity': 'palanpur'});
-
-  print(s);
+  print('');
 }

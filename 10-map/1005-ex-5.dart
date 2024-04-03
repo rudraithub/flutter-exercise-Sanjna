@@ -8,5 +8,7 @@ void main() {
     'city': 'Bhavnagar'
   };
 
-  print(s);
+  s.forEach((key, value) {
+    print("$key : $value");
+  });
 }

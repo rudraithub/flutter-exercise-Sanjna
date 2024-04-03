@@ -1,103 +1,49 @@
 void main() {
   Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
+    'name': 'pulse',
+    'mobile': 9316726716,
+    'address': 'Top three,bhavnagar',
+    'department': ['radiology', 'orthopedics']
   };
 
+  //1
   print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
-  };
+  //2
+  print(s['mobile']);
+  print('');
 
-  print(s['mobileno']);
-}
-
-void main() {
-  Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
-  };
-
+  //3
   print(s.length);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
-  };
+  //4
+  print(s['name']);
+  print('');
 
-  print(s['Hospitalname']);
-}
+  //5
+  s.forEach((key, value) {
+    print(key + '$value');
+  });
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
-  };
-  s.forEach((key, value) => print(key));
-
+  //6
+  s.remove('address');
   print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
-  };
-
-  print(s.remove('address'));
+  //7
+  s['email'] = 'pulse@gmail.com';
   print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
-  };
-
-  s.addAll({'Email': 'pulse@gmail.com'});
-  print(s);
-}
-
-void main() {
-  Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
-  };
+  //8
   print(s.isEmpty);
+  print('');
 
+  //9
+  s.addAll({'doctor name': 'krishna shah', 'staff': 100});
   print(s);
-}
-
-void main() {
-  Map<String, dynamic> s = {
-    'Hospitalname': 'pulse',
-    'mobileno': 9658452125,
-    'address': 'Top three, bhavnagar',
-    'Department': ['Radiology', 'Orthopedics']
-  };
-  s.addAll({"Doctor Name": "J.B.Patel", "Staff": 400});
-
-  print(s);
+  print('');
 }

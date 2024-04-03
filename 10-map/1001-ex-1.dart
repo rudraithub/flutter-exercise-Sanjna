@@ -1,96 +1,52 @@
 void main() {
   Map<String, dynamic> s = {
-    'name': 'sanjna',
-    'mobileno': 9658452125,
-    'address': 'bhavnagar',
+    'name': 'Rudra IT HUb',
+    'mobile': 9316726716,
+    'address': 'Leela Circle,Bhavnagar',
     'course': ['Android', 'Ios', 'Java', 'Swift']
   };
 
+  //1 print map
   print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
-  print(s['Mobileno']);
-}
+  //2 access mobile key value
 
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
+  print(s['mobile']);
+  print(' ');
+
+  //3 find length
   print(s.length);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
-  print(s['Name']);
-}
+  //4 check name exist or not
+  print(s['name']);
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
-  s.forEach((key, value) => print(key));
+  //5 print ,ap using foreach.
+  s.forEach(
+    (key, value) {
+      print(key + ' : $value');
+    },
+  );
+  print('');
+
+  //6 remove address
+  s.remove('address');
   print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
-  print(s.remove('Address'));
+  //7 add email
+  s['email'] = 'rudraithub.bhavnagar@gmail.com';
   print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
-  s.addAll({'Email': 'sanjna@gmail.com'});
-  print(s);
-}
-
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
+  //8 check map empty or not
   print(s.isEmpty);
-  print(s);
-}
+  print('');
 
-void main() {
-  Map<String, dynamic> s = {
-    'Name': 'Sanjna',
-    'Mobileno': 9658452125,
-    'Address': 'bhavnagar',
-    'course': ['Android', 'Ios', 'Java', 'Swift']
-  };
-  s.addAll({'StudentName': 'Kavya', 'StudentMobileno': 9874568745});
+  //9 add multiple value in map
+  s.addAll({'Student name': 'abc', 'Student mobile no': '9316726716'});
   print(s);
+  print('');
 }
-//
