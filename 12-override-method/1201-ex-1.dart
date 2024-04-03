@@ -5,13 +5,14 @@ void main() {
 
 class A {
   void display() {
-    print("Gyanguru");
+    print('gyanguru');
   }
 }
 
 class B extends A {
+  @override
   void display() {
-    print("Gyanmanjri");
+    print('gyanmanjari');
     super.display();
   }
 }
