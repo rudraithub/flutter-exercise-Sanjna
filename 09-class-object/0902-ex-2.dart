@@ -15,6 +15,6 @@ class Employee {
 }
 
 void main() {
-  var employee = Employee('Pratik Mehta', '9988123458', 10000, 'Aptizech');
+  var employee = Employee('Sanjna solanki', '9316726716', 20000, 'Aptizech');
   employee.displayInfo();
 }
