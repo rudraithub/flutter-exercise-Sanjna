@@ -1,21 +1,35 @@
-void main() {}
+abstract class MyInterface {
+  void firstMethod();
+  void secondMethod();
+}
 
-class A {
-  void display2() {
-    print("class A first method");
+class A implements MyInterface {
+  @override
+  void firstMethod() {
+    print("After implementation class A first method");
   }
 
-  void display3() {
-    print("class A second method");
+  @override
+  void secondMethod() {
+    print("After implementation class A second method");
   }
 }
 
-class B implements A {
-  void display2() {
-    print("after implementation class A first method");
+class C implements MyInterface {
+  @override
+  void firstMethod() {
+    print("After implementation class C first method");
   }
 
-  void display3() {
-    print("after implementation class A second method");
-  }
+  @override
+  void secondMethod() {}
+}
+
+void main() {
+  MyInterface objA = new A();
+  MyInterface objC = new C();
+
+  objA.firstMethod();
+  objA.secondMethod();
+  objC.firstMethod();
 }
