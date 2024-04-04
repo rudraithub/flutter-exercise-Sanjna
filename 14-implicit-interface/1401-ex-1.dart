@@ -15,13 +15,17 @@ class A {
   }
 }
 
-class B {
-  void displayc() {
+class B implements A {
+  void displaya() {
+    print("class A second method");
+  }
+
+  void displayb() {
     print("class C first method");
   }
 }
 
-class C implements A, B {
+class C implements B {
   void displaya() {
     print("after implementation class A first method");
   }
