@@ -1,36 +1,36 @@
 void main() {
   var obj = C();
-  obj.display2();
-  obj.display3();
-  obj.display4();
+  obj.displaya();
+  obj.displayb();
+  obj.displayc();
 }
 
 class A {
-  void display2() {
+  void displaya() {
     print("class A first method");
   }
 
-  void display3() {
+  void displayb() {
     print("class A second method");
   }
 }
 
 class B {
-  void display4() {
+  void displayc() {
     print("class C first method");
   }
 }
 
 class C implements A, B {
-  void display2() {
+  void displaya() {
     print("after implementation class A first method");
   }
 
-  void display3() {
+  void displayb() {
     print("after implementation class A second method");
   }
 
-  void display4() {
+  void displayc() {
     print("after implementation class C first method");
   }
 }
