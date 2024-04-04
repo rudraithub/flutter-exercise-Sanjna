@@ -9,10 +9,6 @@ class A {
   void displaya() {
     print("class A first method");
   }
-
-  void displayb() {
-    print("class A second method");
-  }
 }
 
 class B implements A {
