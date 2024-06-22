@@ -13,14 +13,11 @@ class MyApp extends StatelessWidget {
               title: Text(
                 'TextField Demo',
               ),
-              backgroundColor: Color.fromARGB(196, 247, 92, 193),
+              backgroundColor: Colors.lightGreen,
             ),
             body: Column(children: [
               Row(children: [
-                Icon(
-                  Icons.person,
-                  color: Colors.cyan,
-                ),
+                Icon(Icons.person),
                 SizedBox(width: 10.0),
                 Expanded(
                   child: TextField(
