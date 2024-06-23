@@ -2,71 +2,74 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Scaffold(
+      backgroundColor: Color.fromARGB(221, 115, 102, 113),
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
-          'BUTTON DEMO',
-          style: TextStyle(backgroundColor: Colors.pink),
+          "Button Demo ",
+          style: TextStyle(color: Colors.black),
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                'button 1',
-                style: TextStyle(
-                  color: Colors.black87,
-                  backgroundColor: Colors.amber,
-                  fontSize: 50,
-                ),
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 10,
+                // width: 10,
               ),
-            ),
-            SizedBox(height: 20),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.person,
-                color: Colors.deepPurple,
+              TextButton(
+                  style:
+                      TextButton.styleFrom(backgroundColor: Colors.lightGreen),
+                  onPressed: () {},
+                  child: Text(
+                    "press button",
+                    style: TextStyle(
+                        color: Colors.pink,
+                        // backgroundColor: Color.fromARGB(255, 251, 249, 247),
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
+                  )),
+              SizedBox(
+                height: 30,
               ),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'button 2',
-                style: TextStyle(
-                    color: Colors.white,
-                    backgroundColor: Colors.deepPurple,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 30),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.person,
+                    color: Colors.indigo,
+                  )),
+              SizedBox(
+                height: 35,
               ),
-            ),
-            SizedBox(height: 20),
-            OutlinedButton(
-              onPressed: () {},
-              child: Text(
-                'button 3',
-                style: TextStyle(
-                    color: Colors.deepOrange,
-                    backgroundColor: Colors.lime,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 30),
+              ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "elvanted button",
+                    style: TextStyle(
+                        color: Colors.brown,
+                        fontWeight: FontWeight.bold,
+                        backgroundColor: Color.fromARGB(255, 236, 210, 210)),
+                  )),
+              SizedBox(
+                height: 35,
+                width: 10,
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            FloatingActionButton(
-              onPressed: () {},
-              child: Text(
-                'button 4',
-                style: TextStyle(color: Colors.pink),
-              ),
-            )
-          ],
+              OutlinedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "outline button",
+                    style: TextStyle(
+                        color: Colors.purple,
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        backgroundColor: Colors.white),
+                  ))
+            ],
+          ),
         ),
       ),
     ),
