@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
     );
   }
@@ -29,13 +30,25 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ListView"),
+        title: Text(
+          'ListView',
+        ),
+        backgroundColor: Colors.brown,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.home_filled,
+              color: Colors.yellow,
+            ),
+            onPressed: () {},
+          )
+        ],
       ),
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
-            leading: Icon(Icons.person),
+            leading: Icon(Icons.adobe),
             title: Text(items[index]),
             trailing: Text("Rudra IT Hub"),
           );
