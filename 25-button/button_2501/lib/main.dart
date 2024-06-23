@@ -26,7 +26,7 @@ void main() {
                       TextButton.styleFrom(backgroundColor: Colors.lightGreen),
                   onPressed: () {},
                   child: Text(
-                    "press button",
+                    "text button",
                     style: TextStyle(
                         color: Colors.pink,
                         // backgroundColor: Color.fromARGB(255, 251, 249, 247),
@@ -67,7 +67,7 @@ void main() {
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                         backgroundColor: Colors.white),
-                  ))
+                  )),
             ],
           ),
         ),
