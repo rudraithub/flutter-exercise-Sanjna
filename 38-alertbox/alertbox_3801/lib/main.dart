@@ -1,44 +1,65 @@
 import 'package:flutter/material.dart';
 
-class DialogExample extends StatelessWidget {
-  const DialogExample({Key? key});
+void main() {
+  runApp(MyApp());
+}
 
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Demo(),
+    );
+  }
+}
+
+class Demo extends StatefulWidget {
+  const Demo({super.key});
+
+  @override
+  State<Demo> createState() => _DemoState();
+}
+
+class _DemoState extends State<Demo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[800], // Use Colors.green directly
-        title: Text(
-          'Alert Demo',
-          style:
-              TextStyle(color: Colors.purple[800], fontWeight: FontWeight.w900),
-        ),
+        title: Text("Alert Box"),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.black,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(
-                255, 90, 3, 105), // Use primary for background color
+      body: Center(
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) => AlertDialog(
+                              title: Text("Alert"),
+                              content: Text("Do You Want To Exit ?"),
+                              actions: [
+                                TextButton(
+                                    onPressed: () {}, child: Text("Yes")),
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context, "No");
+                                    },
+                                    child: Text("No")),
+                              ],
+                            ));
+                  },
+                  child: Text(
+                    "Show debug",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  ))
+            ],
           ),
-          onPressed: () => showDialog<String>(
-            context: context,
-            builder: (BuildContext context) => AlertDialog(
-              title: Text('Alert'),
-              content: Text('Do You Want to Exit?'),
-              actions: [
-                ElevatedButton(
-                  onPressed: () => Navigator.pop(context, 'Cancel'),
-                  child: const Text('Cancel'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.pop(context, 'OK'),
-                  child: const Text('OK'),
-                ),
-              ],
-            ),
-          ),
-          child: Text('Show Dialog'),
         ),
       ),
     );
