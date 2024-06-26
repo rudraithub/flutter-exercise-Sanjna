@@ -1,12 +1,13 @@
 void main() {
   int Number1 = 10;
   int Number2 = 20;
+  int temp;
 
-  Number1 = Number1 + Number2;
-  Number2 = Number1 - Number2;
-  Number1 = Number1 - Number2;
+  temp = Number1;
+  Number1 = Number2;
+  Number2 = temp;
 
   print("After swapping:");
-  print("Number = $Number1");
-  print("Number = $Number2");
+  print("Number1 = $Number1");
+  print("Number2 = $Number2");
 }
