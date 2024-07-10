@@ -1,59 +1,67 @@
+import 'package:flutter/material.dart';
+import 'dart:math';
+
 void main() {
-  runApp(myApp());
+  runApp(MyApp());
 }
 
-class myApp extends StatelessWidget {
-  const myApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: customdemo(),
+      home: Demo(),
     );
   }
 }
 
-class demo extends StatefulWidget {
-  const demo({super.key});
+class Demo extends StatefulWidget {
+  const Demo({Key? key}) : super(key: key);
 
   @override
-  State<demo> createState() => _demoState();
+  State<Demo> createState() => _DemoState();
 }
 
-class _demoState extends State<demo> {
+class _DemoState extends State<Demo> {
   double left = 0.0;
   double top = 0.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("draggeble demo"),
+        title: Text("Draggable Demo"),
       ),
       body: Stack(
         children: [
           Positioned(
-              left: left,
-              top: top,
-              child: GestureDetector(
-                onPanUpdate: (details) {
+            left: left,
+            top: top,
+            child: GestureDetector(
+              onPanUpdate: (details) {
+                setState(() {
                   top = max(0, top + details.delta.dy);
                   left = max(0, left + details.delta.dx);
-                  setState(() {});
-                },
-                onTap: () {},
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blueAccent,
+                });
+              },
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.blueAccent,
+                child: Center(
                   child: Text(
-                    "Drage Me",
+                    "Drag Me",
                     style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ))
+              ),
+            ),
+          ),
         ],
       ),
     );
