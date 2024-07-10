@@ -48,7 +48,7 @@ class _DemoState extends State<Demo> {
               child: Container(
                 height: 100,
                 width: 100,
-                color: Colors.blueAccent,
+                color: Colors.pink,
                 child: Center(
                   child: Text(
                     "Drag Me",
