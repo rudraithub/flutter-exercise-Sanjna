@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: const Text(
             "tabbar",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.black),
           ),
           backgroundColor: Color.fromARGB(255, 213, 224, 56),
           bottom: const TabBar(
@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Tab(
                 icon: Icon(
                   Icons.person,
-                  color: Color.fromARGB(255, 36, 1, 152),
+                  color: Color.fromARGB(255, 99, 76, 175),
                 ),
               ),
             ],
